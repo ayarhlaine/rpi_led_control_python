@@ -1,0 +1,11 @@
+version: "3"
+services:
+  python:
+    build:
+      context: ../
+      dockerfile: ./docker/python/Dockerfile
+    container_name: python
+    privileged: true
+    working_dir: /usr/src
+    entrypoint: bash -c "python main.py"
+    restart: unless-stopped

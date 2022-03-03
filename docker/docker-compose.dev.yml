@@ -1,0 +1,11 @@
+version: "3"
+services:
+  python:
+    stdin_open: true
+    tty: true
+    volumes:
+      - "${PWD}/src:/usr/src"
+    build:
+      context: ../
+      dockerfile: ./docker/python/Dockerfile
+    container_name: python
