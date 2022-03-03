@@ -7,6 +7,9 @@ class LightControl:
         self.start_time = start_time
         self.end_time = end_time
         self.light_1 = 18
+        GPIO.setmode(GPIO.BCM)
+        GPIO.setup(self.light_1, GPIO.OUT)
+
 
     def run(self):
         count_down = 0
